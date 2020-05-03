@@ -20,8 +20,8 @@
 				today = new Date();
 				time = today.getMinutes()*60 + today.getSeconds();
 				document.getElementById('video').addEventListener("play", function() { document.getElementById('video').currentTime = time - 30*60; })
-				var interval = setInterval(function() { today = new Date();
-				time = today.getMinutes()*60 + today.getSeconds(); if(counter >= 60) { /*document.getElementById('video').currentTime = time -30*60;*/ counter = 0; repeat(); } console.log((counter++) + " : " + time - 30*60); }, 1000);
+				//var interval = setInterval(function() { today = new Date();
+				//time = today.getMinutes()*60 + today.getSeconds(); if(counter >= 60) { /*document.getElementById('video').currentTime = time -30*60;*/ counter = 0; repeat(); } console.log((counter++) + " : " + time - 30*60); }, 1000);
 			}
 			repeat();
 		</script>
