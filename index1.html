@@ -13,14 +13,14 @@
 		</video>
 		<script type="text/javascript">
 			var today = new Date();
-			var time = today.getMinutes()*60 + today.getSeconds() + 13*60 - 30*60;
+			var time = today.getMinutes()*60 + today.getSeconds() + 13*60;
 			document.getElementById('video').addEventListener('loadedmetadata', function() { this.currentTime = time;}, false);
 			function repeat() {
 				var counter = 0;
 				today = new Date();
 				time = today.getMinutes()*60 + today.getSeconds();
-				document.getElementById('video').addEventListener("play", function() { document.getElementById('video').currentTime = time + 13*60 - 30*60; });
-                                repeat();
+				document.getElementById('video').addEventListener("play", function() { document.getElementById('video').currentTime = time + 13*60; });
+                                //repeat();
 				//var interval = setInterval(function() { today = new Date();
 				//time = today.getMinutes()*60 + today.getSeconds(); if(counter >= 60) { document.getElementById('video').currentTime = time-4*60; counter = 0; repeat(); } console.log((counter++) + " : " + time); }, 1000);
 			}
