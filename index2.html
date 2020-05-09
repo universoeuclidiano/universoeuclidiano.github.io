@@ -7,19 +7,19 @@
 	</head>
 	<body>
 		 <video id="video" width="910" height="360" controls>
-		 	<source src="3.mp4" type="video/mp4"/>
-		 	<source src="3.ogg" type="video/ogg"/>
+		 	<source src="4.mp4" type="video/mp4"/>
+		 	<source src="4.ogg" type="video/ogg"/>
 		 	Your browser does not support the video tag.
 		</video>
 		<script type="text/javascript">
 			var today = new Date();
 			var time = today.getMinutes()*60 + today.getSeconds();
-			document.getElementById('video').addEventListener('loadedmetadata', function() { this.currentTime = time - 15*60;}, false);
+			document.getElementById('video').addEventListener('loadedmetadata', function() { this.currentTime = time - 30*60;}, false);
 			function repeat() {
 				var counter = 0;
 				today = new Date();
 				time = today.getMinutes()*60 + today.getSeconds();
-				document.getElementById('video').addEventListener("play", function() { document.getElementById('video').currentTime = time - 15*60; })
+				document.getElementById('video').addEventListener("play", function() { document.getElementById('video').currentTime = time - 30*60; })
 				//var interval = setInterval(function() { today = new Date();
 				//time = today.getMinutes()*60 + today.getSeconds(); if(counter >= 60) { /*document.getElementById('video').currentTime = time -30*60;*/ counter = 0; repeat(); } console.log((counter++) + " : " + time - 30*60); }, 1000);
 			}
