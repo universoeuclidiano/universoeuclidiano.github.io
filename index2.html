@@ -13,12 +13,12 @@
 		</video>
 		<script type="text/javascript">
 			var today = new Date();
-			var time = today.getMinutes()*60 + today.getSeconds() - 20*60;
+			var time = today.getMinutes()*60 + today.getSeconds() - 30*60;
 			document.getElementById('video').addEventListener('loadedmetadata', function() { this.currentTime = time - 30*60;}, false);
 			function repeat() {
 				var counter = 0;
 				today = new Date();
-				time = today.getMinutes()*60 + today.getSeconds() - 20*60;
+				time = today.getMinutes()*60 + today.getSeconds() - 30*60;
 				document.getElementById('video').addEventListener("play", function() { document.getElementById('video').currentTime = time - 30*60; })
 				//var interval = setInterval(function() { today = new Date();
 				//time = today.getMinutes()*60 + today.getSeconds(); if(counter >= 60) { /*document.getElementById('video').currentTime = time -30*60;*/ counter = 0; repeat(); } console.log((counter++) + " : " + time - 30*60); }, 1000);
